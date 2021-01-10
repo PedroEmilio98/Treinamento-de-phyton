@@ -1,0 +1,15 @@
+//programa que calcula as raízes reais de uma equação de segundo grau. Caso não existam tais raízes, retorna "nao existem raízes reais"
+
+import math
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+
+//calcula delta e testa se esse é positivo ou negativo. Caso for negativo, sabemos que não existem raízes reais 
+delta = float(b**2-4*a*c)
+if delta>= 0:
+    x1 = float((-b +math.sqrt(delta))/2*a)
+    x2 = float((-b -math.sqrt(delta))/2*a)
+    print('as raízes são {} e {}'.format(x1, x2))
+else:
+    print('não existem raízes reais')
